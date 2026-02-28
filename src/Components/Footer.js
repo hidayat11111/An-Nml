@@ -1,83 +1,91 @@
 import React from "react";
 import instagram from "./../Images/instagram.png";
-import facebook from "./../Images/facebook.png";
-import Youtube from "./../Images/Youtube.png";
 import location from './../Images/location.png';
 import envelope from './../Images/envelope.png';
 import telephone from './../Images/telephone.png';
 import { Link } from "react-router-dom";
+import Logo from "./../Images/Logo.png";
+import Face from "./../Images/Face.png"
 const Footer=()=>{
     return(
-        <div className="w-full bg-[#EAE4DD] h-auto mt-28 flex flex-col  items-center pt-8 xl:pt-16 pb-6 ">
-        <div className="xl:w-[90%] flex flex-row justify-evenly flex-wrap">
-        <div className="flex flex-row gap-4 xl:gap-14">
-          <div className="flex flex-col gap-3">
-            <p className="font-sans font-semibold text-xl pl-2.5 text-DarkBlack">Follow us</p>
-            <div className="flex flex-row justify-evenly flex-wrap gap-3 xl:gap-7 ">
-              <Link>
-                <div className="bg-[#C0C0C0] rounded-full p-2">
-                  <img
-                    src={Youtube}
-                    className=" w-8 bg-[#ffffff] rounded-2xl p-0.5"
-                    alt="error"
-                  />
-                </div>{" "}
-              </Link>
-              <Link>
-                <div className="bg-[#C0C0C0]  rounded-full p-2">
-                  <img
-                    src={instagram}
-                    className=" w-8 bg-[#ffffff] rounded-2xl p-0.5"
-                    alt="error"
-                  />
-                </div>
-              </Link>
-              <Link>
-                <div className="bg-[#C0C0C0]  rounded-full p-2">
-                  <img
-                    src={facebook}
-                    className="w-8 bg-[#ffffff] rounded-2xl p-0.5"
-                    alt="error"
-                  />
-                </div>
-              </Link>
-            </div>
+       <div className="w-full bg-[#F1F0E9] mt-20 px-6 xl:px-16 py-10">
+
+  {/* Top Section */}
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+
+
+
+    {/* Column 1 - Social */}
+    <div className="flex flex-col gap-2">
+
+   <img src={Logo} alt="error" className="w-12"/>
+   <div className="flex flex-col gap-2" >
+
+      <p className="font-semibold text-lg text-DarkBlack">Follow Us</p>
+
+      <div className="flex items-center gap-3">
+        
+
+        <Link to="https://www.instagram.com/an_naml_27?igsh=bjVhMWt6eWdjYW5v" >
+          <div className="bg-[#8A7650] rounded-full p-2">
+            <img src={instagram} alt="error" className="w-4" />
           </div>
-
-          <div className="flex flex-col gap-3">
-            <li className="font-sans font-semibold text-DarkBlack opacity-90">About Us</li>
-            <li className="font-sans font-semibold text-DarkBlack opacity-90" >Programes</li>
-            <li className="font-sans font-semibold text-DarkBlack opacity-90" >Services</li>
-            <li className="font-sans font-semibold text-DarkBlack opacity-90" >Doctors</li>
-            
+        </Link>
+         <Link>
+          <div className="bg-[#8A7650] rounded-full p-2">
+            <img src={Face} alt="error" className="w-4" />
           </div>
+        </Link>
 
-          </div>
+       </div>
+      </div>
+    </div>
 
-          <div className="flex flex-col gap-3 " >
+    {/* Column 2 - Links */}
+    <div className="flex flex-col gap-3">
+      <p className="font-semibold text-xl text-[#000000]">Quick Links</p>
 
-         <p className="text-DarkBlack font-sans font-semibold text-xl">Get In Touch</p>
-         <div className="flex flex-row items-center gap-1"><img src={location} className="w-6" alt=""/><p className="font-sans text-sm  text-DarkBlack opacity-90">Add: Jewbrara Near Pandov Park Awantipora-192122</p></div>
-         <div  className="flex flex-row items-center gap-1.5" ><img src={envelope} className="w-6" alt=""/><p className="font-sans text-sm  text-DarkBlack opacity-90" > Email: sheikhMudhat@gmail.com</p></div>
-         <div  className="flex flex-row items-center gap-1.5" ><img src={telephone} className="w-6" alt=""/><p className="font-sans text-sm text-DarkBlack opacity-90" >Phone: 7889312300</p></div>
+      <ul className=" text-sm flex flex-col gap-2 text-DarkBlack opacity-90">
+        <li>About Us</li>
+        <li>Contact Us</li>
+        <li>Offers</li>
+        <li>Categories</li>
+      </ul>
+    </div>
 
-          </div>
+    {/* Column 3 - Contact */}
+    <div className="flex flex-col gap-4">
+      <p className="font-semibold text-xl text-[#000000]">Get In Touch</p>
 
-        </div>
-
-
-        <div className="w-full flex flex-col items-center opacity-50 mt-6">
-        <hr className="w-full text-DarkBlack opacity-50" />
+      <div className="flex items-center gap-2 text-sm text-DarkBlack opacity-90">
+        <img src={location} alt="error" className="w-5" />
+        <p>Lal Bazar near playground, Srinagar</p>
       </div>
 
-        <div className=" w-[85%] xl:w-[70%] flex flex-row justify-evenly gap-9  mt-3">
-
-
-   <p className="font-sans font-normal text-xs xl:text-sm ">@ 2020 BHM HOSPITAL. All Rights Reserved.</p>
-   <p className="font-sans font-normal text-xs  xl:text-sm ">Read Terms & Conditions</p>
-   {/* <p className="font-sans font-normal text-xs  xl:text-sm ">Health Information Policy</p> */}
-        </div>
+      <div className="flex items-center gap-2 text-sm text-DarkBlack opacity-90">
+        <img src={envelope} alt="error" className="w-5" />
+        <p>Stabish909@gmail.com</p>
       </div>
+
+      <div className="flex items-center gap-2 text-sm text-DarkBlack opacity-90">
+        <img src={telephone} alt="error" className="w-5" />
+        <p>7889312300</p>
+      </div>
+    </div>
+
+  </div>
+
+  {/* Divider */}
+  {/* <div className="max-w-7xl mx-auto mt-8">
+    <hr className="border-DarkBlack opacity-30" />
+  </div> */}
+
+  {/* Bottom */}
+  
+
+</div>
+
     )
 }
+
 export default Footer;

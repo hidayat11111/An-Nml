@@ -3,3 +3,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@media (min-width: 1280px) {
+  .hide-scrollbar-web::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar-web {
+    -ms-overflow-style: none;  /* IE & Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+}
+/* Prevent horizontal scroll */
+/* THIS is the real fix */
+body {
+  overflow-x: hidden;
+}
+
+/* animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* mobile fast */
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+
+/* desktop slower */
+@media (min-width: 768px) {
+  .animate-scroll {
+    animation: scroll 18s linear infinite;
+  }
+}
+

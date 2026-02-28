@@ -36,9 +36,9 @@ transition={{
 }}
         >
         <div className="flex flex-row gap-2 items-center">
-           <img className="w-36" id="logo" src={Logo} alt="" /> 
+           <img className="w-20" id="logo" src={Logo} alt="" /> 
           <p className=" text-center font-sans font-medium text-2xl opacity-85 hidden xl:block">
-          BHM Hospital and Nursing Home
+          Customized By Tabish
           </p>
           </div>
           <Lottie className="w-[15%]" animationData={splash} loop={true} />
@@ -47,7 +47,6 @@ transition={{
   
   
       </div>
-
 
 
     )

@@ -1,353 +1,563 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./../Images/Logo.png";
-import Health from "./../Images/Health.png";
-import Process from "./../Images/Process.png";
-import doctor from "./../Images/doctor.png";
-import bacteria from "./../Images/bacteria.png";
-import firstAid from "./../Images/firstAid.png";
-import HospitalPhoto from "./../Images/HospitalPhoto.png";
-import facilities from "./../Images/facilities.png";
-import onlineSession from "./../Images/onlineSession.png";
-import canteen from "./../Images/canteen.png";
-import Emergency from "./../Images/Emergency.png";
-import Pharmacy from "./../Images/Pharmacy.png";
-import operation from "./../Images/operation.png";
-import bgd from "./../Images/bgd.jpg";
+import Poster from "./../Images/Poster.png";
+import Gift from "./../Images/gift.png";
+import Assigments from "./../Images/Assigments.jpg";
+import salah from "./../Images/Salah.jpg";
 import Footer from "./Footer";
-import { useState } from "react";
+
+import cart from "./../Images/cart.png";
+import whishlist from "./../Images/whishlist.png";
+// import Footer from "./Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import surprise from "./../Images/surprise.png";
+import Exper from "./../Images/Exper.png"
+import Smart from "./../Images/Smart.png"
+import product from "./../Images/product.png";
+import achievement from "./../Images/achievement.png";
+import WebPoster from "./../Images/WebPoster.png";
+
+import Model from "../Images/Model.jpeg";
+import Flashcards from "../Images/Flashcards.jpeg";
+import Chart from "../Images/Chart.jpeg";
+import Practical from "../Images/Practical.jpg";
+import Clay from "../Images/Clay.jpeg";
+import LooseSheet from "../Images/LooseSheet.jpg"
+import User12 from "./../Images/User12.png"
+import whatsapp from "./../Images/whatsapp.png"
+
 
 const LandingPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const navLinks = [
-    { path: "/landing", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/services", label: "Services" },
-    { path: "/Doctors", label: "Doctors" },
-    { path: "/contact", label: "Contact" },
+
+const reviews = [
+  {
+    id: 1,
+    name: "Zehra Farooq",
+    image: User12,
+    rating: 5,
+    text: "i honestly can't thank you enough it looks incredible. well you took a huge weight off my shoulders. it is just brilliant thank you ",
+  },
+  {
+    id: 2,
+    name: "Madiha",
+    image: User12,
+    rating: 4,
+    text: "A literal 10 on 10 remarks to this service provided by tabish mushtaq,no tantrums no late work nthing, everything on time and yeah the work is so neat ",
+  },
+  {
+    id: 3,
+    name: "Zainab",
+    image: User12,
+    rating: 5,
+    text: "Absolutely thrilled with this It's even better than I expected. Looking forward to shopping with you again",
+  },
+  {
+    id: 4,
+    name: "Shah Farhana",
+    image: User12,
+    rating: 5,
+    text: "This is a brilliant and highly effective visual representation of water conservation. You have successfully broken down a complex environmental process into simple, easy-to-understand stages.",
+  },
+  {
+    id: 5,
+    name: "Hina Tabasum",
+    image: User12,
+    rating: 4,
+    text: "Got my assignment and charts done quickly. Thanxx so much for these beautiful projects deaI am sersly very happy",
+  },
+  {
+    id: 6,
+    name: "Zoya Ali",
+    image: User12,
+    rating: 5,
+    text: "Excellent work on gift items and charts. The details, colors, and finishing were perfect and made my project stand out.",
+  },
+];
+
+   const products = [
+    {
+      id: 1,
+      title: "Loose Sheet Work",
+      price: 250,
+      oldPrice: 300,
+      desc: "/ 10 pages",
+      image: LooseSheet,
+      offer: "20% Off",
+    },
+    {
+      id: 2,
+      title: "Model Work",
+      price: 350,
+      oldPrice: 400,
+      desc: "/ per model",
+      image: Model,
+      offer: "15% Off",
+    },
+    {
+      id: 3,
+      title: "Flash Cards",
+      price: 200,
+      oldPrice: 250,
+      desc: "/ 10 cards",
+      image: Flashcards,
+      offer: "18% Off",
+    },
+    {
+      id: 4,
+      title: "Chart Work",
+      price: 150,
+      oldPrice: 200,
+      desc: "/ per chart",
+      image: Chart,
+      offer: "25% Off",
+    },
+    {
+      id: 5,
+      title: "Practical Notebook",
+      price: 300,
+      oldPrice: 350,
+      desc: "/ notebook",
+      image: Practical,
+      offer: "10% Off",
+    },
+    {
+      id: 6,
+      title: "Clay Model",
+      price: 400,
+      oldPrice: 450,
+      desc: "/ per model",
+      image: Clay,
+      offer: "12% Off",
+    },
   ];
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+
+
+
+
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: false, // animation only once
+    });
+  }, []);
+  const [isOpen, setIsOpen] = useState(false);
+ 
+
+  const navLinks = [
+    { path: "/landing", label: "Home" },
+    { path: "/", label: "Categories" },
+    { path: "/", label: "Offers" },
+    { path: "/about", label: "About Us" },
+    { path: "/Doctors", label: "Contact Us" },
+  ];
 
   return (
-    <div>
-      <div className="w-full h-svh relative">
-        <section className="w-full fixed top-0 left-0 z-10 bg-[#EAE4DD]">
-          <nav className="flex items-center justify-between  bg-[#EAE4DD] w-full">
-            <img src={Logo} className="w-16" alt="error" />
-            <div className="px-5 xl:px-12 py-6 flex w-full items-center justify-between">
-              {/* Full Menu for Larger Screens */}
-              <div className="xl:flex flex-grow items-center justify-end">
-                <ul className="hidden md:flex pr-16 font-light font-heading space-x-12">
-                  {navLinks.map(({ path, label }) => (
-                    <Link to={path} key={label}>
-                      <p className=" text-DarkBlack opacity-85 font-sans font-medium text-sm bg-gradient-to-r from-slate-300 to-white bg-clip-text text-transparent hover:text-gray-800 hover:bg-none hover:underline">
-                        {label}
-                      </p>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
+    <div className="w-full">
+      {/* ================= NAVBAR ================= */}
+    <section className="fixed w-full top-0 left-0 z-50 bg-[#F1F0E9]">
 
-              {/* Burger Icon for Mobile View */}
-              <button
-                className="xl:hidden flex items-center space-x-5"
-                onClick={toggleMenu}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 hover:text-gray-200"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
-            </div>
+  {/* NAVBAR */}
+  <nav className="flex items-center justify-between w-full max-w-screen-xl mx-auto px-4 py-2.5">
 
-            {/* Mobile Menu */}
-            <div
-              className={`py-4 fixed top-0 right-0 h-auto w-full text-white transition-transform transform ${
-                isOpen ? "translate-x-0 shadow-lg" : "translate-x-full"
-              } z-20 overflow-hidden`}
-              style={{
-                background:
-                  "linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%)",
-                boxShadow: isOpen
-                  ? "0 4px 20px rgba(255, 255, 255, 0.4)"
-                  : "none",
-              }}
-            >
-              <button
-                className="absolute top-4 right-4 rounded-full text-2xl bg-lightGreen text-DarkBlack px-2.5 "
-                onClick={toggleMenu}
-                aria-expanded={isOpen}
-              >
-                &times;
-              </button>
-              <ul className="flex flex-col items-center p-5 space-y-4 max-h-[80vh] overflow-y-auto ">
-                <div className="flex flex-col gap-2.5">
-                  {navLinks.map(({ path, label }) => (
-                    <li key={label} className="list-none">
-                      <Link
-                        to={path}
-                        onClick={toggleMenu}
-                        className="font-sans font-normal text-sm bg-gradient-to-r from-slate-300 to-white bg-clip-text text-transparent hover:text-white hover:underline underline-offset-4 decoration-gray-500"
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </div>
-              </ul>
-            </div>
-          </nav>
-        </section>
+    {/* Logo */}
+    <img src={Logo} className="w-12" alt="logo" />
 
-        <div className="h-svh w-full pt-24 xl:pt-10 flex flex-col-reverse gap-3 xl:gap-0 xl:flex-row justify-center items-center xl:justify-around bg-[#F5F7F8] ">
-          <div className="flex flex-col gap-3 w-[90%] xl:w-[40%]">
-            <div className="flex flex-row gap-2 items-center hidden xl:block">
-              {" "}
-              <img src={Health} className="w-8" alt="error" />{" "}
-              <p className="font-sans opacity-70 text-sm text-DarkBlack">
-                Welcome to BHM Hospital and Nursing Home
-              </p>
-            </div>
-            <p className="font-sans xl:text-5xl text-4xl leading-tight xl:leading-tight font-medium text-DarkBlack w-[98%] xl:w-auto">
-              Taking care of <br /> your health is our top priority
+    {/* Desktop Nav Links */}
+    <div className="hidden md:flex justify-center flex-grow">
+      <ul className="flex gap-6 lg:gap-10 text-black">
+        {navLinks.map(({ path, label }) => (
+          <Link to={path} key={label}>
+            <p className="text-sm hover:underline cursor-pointer">
+              {label}
             </p>
-            <p className="font-sans text-DarkBlack opacity-70 text-sm mt-2">
-              Being healthy is more than just not getting sick. It involves
-              mental, physical, and social well-being. It's not just about
-              treatment; it's about how you feel
-            </p>
-          </div>
+          </Link>
+        ))}
+      </ul>
+    </div>
 
-          <img
-            src={HospitalPhoto}
-            className=" w-[80%] xl:w-[30%] "
-            alt="error"
-          />
+    {/* Right Side */}
+    <div className="flex items-center gap-3">
 
-          <div className="flex gap-2 items-center  xl:hidden">
-            {" "}
-            <img src={Health} className="w-8" alt="error" />{" "}
-            <p className="font-sans opacity-70 text-sm text-DarkBlack">
-              Welcome to BHM Hospital and Nursing Home
-            </p>
-          </div>
-        </div>
+      {/* Desktop Right */}
+      <div className="hidden md:flex items-center gap-3">
+        <img src={whishlist} className="w-5" alt="" />
+        <img src={cart} className="w-5" alt="" />
+        <button className="bg-[#8A7650] text-white rounded-lg px-3 py-1.5 text-sm">
+          Login
+        </button>
       </div>
 
-      <div className="h-auto w-full flex flex-col gap-16 items-center">
-        <div className="w-full flex flex-col items-center mt-10 ">
-          <hr className="w-10/12 opacity-50" />
-        </div>
+      {/* Mobile Right (icons + hamburger) */}
+      <div className="flex items-center gap-3 md:hidden">
+        <img src={whishlist} className="w-5" alt="" />
+        <img src={cart} className="w-5" alt="" />
 
-        <div className="w-[70%] flex flex-col items-center gap-4">
-          <div className="flex flex-row gap-2 items-center mt-2 ">
-            {" "}
-            <img src={Process} className="w-8 opacity-70" alt="error" />{" "}
-            <p className="text-[#a8b481]">OUR WORK PROCESS</p>
-          </div>
-          <p className="font-sans text-4xl font-medium text-DarkBlack text-center opacity-95">
-            Let’s see how we can make <br /> this happen
-          </p>
-          <div className="w-[90%] flex flex-row flex-wrap justify-evenly">
-            <div className="flex flex-col p-4 items-center gap-4">
-              <div className=" bg-lightGreen rounded-full p-5">
-                <img src={doctor} className="w-24" alt="error" />
-              </div>
-              <p className="font-sans text-DarkBlack font-medium opacity-70">
-                Seeing Patients
-              </p>
-            </div>
-            <div className="flex flex-col p-4 items-center gap-4">
-              <div className=" bg-lightGreen rounded-full p-5">
-                <img src={bacteria} className="w-24" alt="error" />
-              </div>
-              <p className="font-sans text-DarkBlack font-medium opacity-70">
-                Make Diagnosis
-              </p>
-            </div>
-            <div className="flex flex-col p-5 items-center gap-4">
-              <div className=" bg-lightGreen rounded-full p-4 ">
-                {" "}
-                <img src={firstAid} className="w-24" alt="error" />
-              </div>
-              <p className="font-sans text-DarkBlack font-medium opacity-70">
-                Treatment
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full flex flex-col items-center mt-4">
-          <hr className="w-10/12 opacity-50" />
-        </div>
+        <button onClick={() => setIsOpen(!isOpen)} className="text-2xl bg-[#e0d9d9] px-2 py-0.5 rounded-md">
+          ☰
+        </button>
       </div>
 
-      <div className="w-full flex xl:flex-row flex-col mt-12 xl:gap-0 gap-12 ">
-        <div className="xl:w-2/4 flex flex-col gap-4 pl-[8%] justify-center">
-          <div className="flex flex-row gap-2 items-center">
-            {" "}
-            <img src={facilities} className="w-8 opacity-70" alt="error" />
-            <p className="text-[#a8b481] font-sans">OUR FACILITIES</p>
-          </div>
-          <h1 className="font-sans text-5xl leading-tight font-medium text-DarkBlack opacity-95">
-            Facilities That We Provide
-          </h1>
-          <p className="font-sans text-DarkBlack opacity-70 w-[90%]">
-            Our hospital provides advanced medical services with the latest
-            technology and highly specialized departments.Patients benefit from
-            comfortable inpatient facilities
-          </p>
-          <div>
-            <button className="flex flex-row items-center gap-1 text-darkGreen border-2 border-darkGreen font-medium px-6 rounded-lg py-2 font-sans text-sm hover:bg-darkGreen hover:text-DarkBlack">
-              View All{" "}
-            </button>
-          </div>
-        </div>
-        <div className="xl:w-2/4 flex xl:flex-row flex-col justify-center items-center gap-3 ">
-          <div className="flex xl:flex-col justify-center gap-4 xl:w-[40%] w-[96%] ">
-            <div className="bg-darkGreen p-3 rounded-lg w-full flex flex-col gap-2">
-              <div className="bg-[#ffffff] w-fit p-2 rounded-full  ">
-                <img
-                  src={onlineSession}
-                  className="w-10"
-                  alt="online session"
-                />
-              </div>
-              <p className="font-sans font-medium text-DarkBlack">
-                online session
-              </p>
-              <p className="font-sans font-normal text-sm text-DarkBlack opacity-80">
-                As a hospital provider, our Online Sessions Facility enables
-                patients to access expert medical consultations from the comfort
-                of their homes.
-              </p>
-            </div>
-            <div className="bg-darkGreen p-3 rounded-lg flex flex-col gap-2 w-full">
-              <div className="bg-[#ffffff] w-fit  p-2 rounded-full">
-                <img src={operation} className="w-10" alt="online session" />
-              </div>
-              <p className="font-sans font-medium text-DarkBlack">
-                Instant Surgery
-              </p>
-              <p className="font-sans font-normal text-sm text-DarkBlack opacity-80">
-                As a hospital provider, our Instant Operation Facility offers
-                immediate surgical care for patients facing critical,
-                life-threatening conditions.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col justify-center gap-4 xl:w-[40%] w-[80%]">
-            <div className="bg-darkGreen p-3 rounded-lg flex flex-col gap-3 w-full">
-              <div className="bg-[#ffffff] w-fit p-2 rounded-full">
-                <img src={Pharmacy} className="w-10" alt="online session" />
-              </div>
-              <p className="font-sans font-medium text-DarkBlack">Pharmacy</p>
-              <p className="font-sans font-normal text-sm text-DarkBlack opacity-80">
-                As hospital provider, our Pharmacy Facility ensures timely
-                access to a wide range of the medications for both inpatients
-                and outpatients.
-              </p>
-            </div>{" "}
-            <div className="bg-darkGreen p-3 rounded-lg flex flex-col gap-2 w-full">
-              <div className="bg-[#ffffff] w-fit p-2 rounded-full">
-                <img src={canteen} className="w-10" alt="online session" />
-              </div>
-              <p className="font-sans font-medium text-DarkBlack">Canteen</p>
-              <p className="font-sans font-normal text-sm text-DarkBlack opacity-80">
-                As a hospital provider, our Canteen Facility offers nutritious
-                and has a hygienic meals for patients, visitors, and staff.
-              </p>
-            </div>{" "}
-            <div className="bg-darkGreen p-3 rounded-lg flex flex-col gap-2 w-full">
-              <div className="bg-[#ffffff] w-fit p-2 rounded-full">
-                <img
-                  src={Emergency}
-                  className="w-10 rounded-full"
-                  alt="online session"
-                />
-              </div>
-              <p className="font-sans font-medium text-DarkBlack">
-                Emergency Care
-              </p>
-              <p className="font-sans font-normal text-sm text-DarkBlack opacity-80">
-                As a hospital provider, our Instant Operation Facility offers
-                immediate surgical care for patients facing critical,
-                life-threatening conditions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
 
-      <div className="w-full flex flex-col items-center mt-12">
+  </nav>
+
+  {/* MOBILE MENU */}
+  {isOpen && (
+    <div className="md:hidden bg-[#F1F0E9] px-4 pb-4 shadow-md">
+      <ul className="flex flex-col gap-4">
+        {navLinks.map(({ path, label }) => (
+          <Link to={path} key={label} onClick={() => setIsOpen(false)}>
+            <p className="text-black text-sm">{label}</p>
+          </Link>
+        ))}
+
+        <button className="bg-[#8A7650] text-white rounded-lg px-3 py-2 text-sm mt-2">
+          Login
+        </button>
+      </ul>
+    </div>
+  )}
+
+</section>
+
+      {/* ================= HERO / POSTER ================= */}
+ <section className="pt-[4rem] mt-0 xl:mt-20 px-0 xl:pt-18">
+  <div className="flex items-center justify-center">
+
+    {/* Mobile Image */}
+    <img
+      src={Poster}
+      alt="mobile poster"
+      className="block xl:hidden w-full h-auto object-contain"
+    />
+
+    {/* Web Image */}
+   <img
+  src={WebPoster}
+  alt="web poster"
+  className="hidden xl:block xl:w-full xl:h-svh object-cover"
+/>
+
+  </div>
+</section>
+      {/* ================= DIVIDER ================= */}
+      <div className="w-full flex justify-center mt-12 xl:mt-20">
         <hr className="w-10/12 opacity-50" />
       </div>
 
-      <div className=" w-full flex flex-col items-center pt-24">
-        <p
-          style={{
-            backgroundImage: `url(${bgd})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "90%",
-          }}
-          className="font-sans text-4xl font-medium text-DarkBlack text-center opacity-95"
-        >
-          Why choose BHM Hospital ?
-        </p>
+      {/* ================= EXPLORE SECTION ================= */}
+      <section
+        data-aos="fade-up"
+        className="mt-12 xl:mt-20 flex flex-col items-center gap-12 px-4"
+      >
+        <h2 className="text-3xl xl:text-4xl font-medium text-DarkBlack text-center">
+          Explore What We Offer
+        </h2>
 
-        <div className="w-[75%] mt-16 flex xl:flex-row flex-col justify-evenly gap-12 xl:gap-0">
-          <div className=" w-full xl:w-[40%] flex xl:flex-col gap-5 flex-wrap">
-            <div className="bg-gradient-to-r from-[#E9EDC9] to-[#bcbdb4] p-4 rounded-lg">
-              <p className="text-DarkBlack font-sans font-bold">
-                Successful Treatment
-              </p>
-              <p className="font-sans text-[0.95rem] text-DarkBlack opacity-90">
-                Our experience of treating thousands of patients each year
-                prepares us to take core of the one who matters most-you.{" "}
-              </p>
+        <div className="flex flex-wrap justify-center gap-10">
+          {/* Card */}
+          <div className="flex flex-col items-center gap-3 w-56">
+            <div className="border-2 border-[#f6f0d7] rounded-full w-36 h-36 flex items-center justify-center">
+              <img src={Gift}  alt="error" className="w-20 object-contain" />
             </div>
-            <div className="bg-gradient-to-r from-[#bcbdb4] to-[#E9EDC9] p-4 rounded-lg">
-              <p className="text-[#ffffff] font-sans font-bold">All answers</p>
-              <p className="font-sans text-[0.95rem] text-DarkBlack opacity-90 ">
-                Count on our experts to deliver not only accurate diagnosis but
-                also the most of personalized and effective treatment plan.
-              </p>
-            </div>
+           <Link to="/GiftPage">   <p className="text-lg text-DarkBlack opacity-70">Gift Items</p> </Link> 
           </div>
-          <div className=" rounded-lg xl:w-[40%] bg-gradient-to-r from-[#bcbdb4] via-[#E9EDC9] to-[#bcbdb4] p-4 flex flex-col gap-3">
-            <p className="font-sans text-[#ffffff]  font-bold text-3xl ">
-              Best <br /> experience
-            </p>
-            <p className="font-sans text-[0.95rem] text-DarkBlack opacity-90 ">
-              We employ the best specialists. Would you like to get to know our
-              team and discover how they can help you on your healthcare
-              journey?
-            </p>
-            <button className=" border-2 border-[#bcbdb4] font-sans font-medium bg-lightGreen w-[85%] rounded-lg py-2.5 mx-auto mt-2">
-              More info
-            </button>
+
+          {/* Card */}
+          <div className="flex flex-col items-center gap-3 w-56">
+            <div className="border-2 border-[#f6f0d7] rounded-full w-36 h-36 flex items-center justify-center">
+              <img src={Assigments}  alt="error" className="w-20 object-contain" />
+            </div>
+          <Link to="/AssigmentPage"> <p className="text-lg text-DarkBlack opacity-70">Assignments</p></Link>
+          </div>
+
+          {/* Card */}
+          <div className="flex flex-col items-center gap-3 w-56">
+            <div className="border-2 border-[#f6f0d7] rounded-full w-36 h-36 flex items-center justify-center">
+              <img src={salah}  alt="error" className="w-20 object-contain" />
+            </div>
+        <Link to="/Deen"><p className="text-lg text-DarkBlack opacity-70">Deen Essentials</p></Link>
           </div>
         </div>
+      </section>
+
+      {/* ================= DIVIDER ================= */}
+      <div className="w-full flex justify-center mt-12 xl:mt-20">
+        <hr className="w-10/12 opacity-50" />
       </div>
 
-      {/* footer */}
+ <section className="mt-10 w-full xl:w-[85%] mx-auto px-4 xl:px-0">
 
-      <Footer />
+      {/* Heading */}
+      <h2 className="text-xl xl:text-2xl font-semibold text-gray-800 mb-6">
+       Most Requested Work
+      </h2>
+
+      {/* Scroll Row */}
+      <div className="flex gap-4 overflow-x-auto pb-4 hide-scrollbar-web">
+
+        {products.map((item) => (
+          <div
+            key={item.id}
+            className="min-w-[200px] bg-[#F6F5F2] rounded-xl p-3 shadow-sm hover:shadow-md transition"
+          >
+
+            {/* Image */}
+            <div className="relative">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-28 object-cover rounded-lg"
+              />
+
+              <span className="absolute top-2 left-2 bg-[#BBAA89] text-white text-[10px] px-2 py-0.5 rounded">
+                {item.offer}
+              </span>
+            </div>
+
+            {/* Content */}
+            <div className="mt-3">
+              <h3 className="text-sm font-semibold text-gray-800">
+                {item.title}
+              </h3>
+
+              <p className="mt-1 text-xs text-gray-500">
+                <span className="line-through text-[#CFC6B4] mr-1">
+                  ₹{item.oldPrice}
+                </span>
+                <span className="font-bold text-black text-sm">
+                  ₹{item.price}
+                </span>
+                <span className="ml-1">{item.desc}</span>
+              </p>
+
+              <button className="mt-3 w-full bg-[#8A7650] text-white py-1.5 rounded-lg text-sm font-medium hover:opacity-90">
+                Explore
+              </button>
+            </div>
+
+          </div>
+        ))}
+
+      </div>
+    </section>
+
+    
+
+      {/* ================= WHY CHOOSE US ================= */}
+      {/* ================= WHY CHOOSE US ================= */}
+      <section
+        data-aos="zoom-in"
+        className=" w-full mt-16 xl:mt-15 px-4 xl:px-10 flex flex-col items-center xl:flex-col gap-12 xl:gap-12"
+      >
+        {/* LEFT */}
+        <div className="xl:w-1/2 flex flex-col gap-4 justify-center items-center">
+        
+
+               <div className="flex items-center justify-center gap-3">
+  
+  {/* Vertical Line */}
+  <div className="w-[3px] h-10 bg-[#8A7650] rounded-full"></div>
+
+  {/* Heading */}
+  <h2 className="text-2xl xl:text-4xl font-semibold text-gray-800">
+     Why Choose Us ?
+  </h2>
+
+</div>
+
+        
+        
+
+
+          <p className="text-DarkBlack opacity-60 max-w-lg text-center">
+            We customize all your thoughts .Your satisfaction is our priority !
+          </p>
+        </div>
+
+        {/* RIGHT */}
+        <div className="xl:w-[70%]">
+          {/* MOBILE → stacked */}
+          <div className="flex flex-col gap-4 xl:hidden">
+            <div className="bg-[#ECECEC]  p-4 rounded-lg">
+              <img src={achievement} alt="error" className=" bg-[#ffffff] w-12 mb-3 p-2 rounded-full"  />
+              <p className="font-medium">Thoughtfully Designed Products</p>
+              <p className="text-sm opacity-80">
+                Carefully crafted assignments and gifts made with purpose.
+              </p>
+            </div>
+
+            <div className="bg-[#ECECEC]  p-4 rounded-lg">
+              <img src={Smart} alt="error" className=" bg-[#ffffff] w-12 mb-3 p-2 rounded-full"  />
+              <p className="font-medium">Customization That Matters</p>
+              <p className="text-sm opacity-80">
+                Personalized gifts tailored with elegance and care.
+              </p>
+            </div>
+
+            <div className="bg-[#ECECEC]  p-4 rounded-lg">
+              <img src={surprise}  alt="error" className=" bg-[#ffffff] w-12 mb-3 p-2 rounded-full"  />
+              <p className="font-medium">Built for Consistency</p>
+              <p className="text-sm opacity-80">
+                Track prayers and stay disciplined daily.
+              </p>
+            </div>
+
+            <div className="bg-[#ECECEC]  p-4 rounded-lg">
+              <img src={Exper}  alt="error" className=" bg-[#ffffff] w-12 mb-3 p-2 rounded-full"  />
+              <p className="font-medium">Quality You Can Trust</p>
+              <p className="text-sm opacity-80">
+                Clean design and practical layouts for daily use.
+              </p>
+            </div>
+
+            <div className="bg-[#ECECEC]  p-4 rounded-lg">
+              <img src={product}  alt="error" className=" bg-[#ffffff] w-12 mb-3 p-2 rounded-full"  />
+              <p className="font-medium">Perfect for Families</p>
+              <p className="text-sm opacity-80">
+                Designed for both kids and adults.
+              </p>
+            </div>
+          </div>
+
+          {/* DESKTOP → grid cards */}
+          <div className="hidden xl:flex flex-col items-center gap-10">
+            {/* Row 1 → 3 Cards */}
+            <div className="flex justify-center gap-10">
+              <div className="w-[50%] bg-[#ECECEC] p-5 rounded-xl hover:shadow-md transition flex flex-col">
+              <img src={achievement} alt="error" className=" bg-[#ffffff] w-12 mb-3 p-2 rounded-full" />
+                
+                <p className="font-medium mb-1">Quality You Can Trust</p>
+                <p className="text-sm opacity-60 flex-grow">
+                  Clean design and practical layouts for daily use.
+                </p>
+              </div>
+
+              <div className="w-[50%] bg-[#ECECEC] p-5 rounded-xl hover:shadow-md transition flex flex-col">
+                <img src={Smart}  alt="error" className=" bg-[#ffffff] w-12 mb-3 p-2 rounded-full"  />
+                <p className="font-medium mb-1">Smart Assignments</p>
+                <p className="text-sm opacity-60 flex-grow">
+                  Well-structured assignments that help in learning, growth, and consistency.
+                </p>
+              </div>
+              <div className="w-[50%] bg-[#ECECEC] p-5 rounded-xl hover:shadow-md transition flex flex-col">
+                <img src={surprise}  alt="error" className=" bg-[#ffffff] w-12 mb-3 p-2 rounded-full"  />
+                <p className="font-medium mb-1">Customized Gift Items</p>
+                <p className="text-sm opacity-60 flex-grow">
+             Personalized gifts crafted to match your needs and special moments.
+                </p>
+              </div>
+            </div>
+
+            {/* Row 2 → 2 Cards (centered) */}
+            <div className="flex justify-center gap-10 w-[70%] items-center">
+              <div className="w-[50%] bg-[#ECECEC] p-5 rounded-xl hover:shadow-md transition flex flex-col">
+                <img src={Exper}  alt="error" className=" bg-[#ffffff] w-12 mb-3 p-2 rounded-full"  />
+                <p className="font-medium mb-1">Personalized Experience</p>
+                <p className="text-sm opacity-60 flex-grow">
+                 Tailored products designed to match your unique needs, crafted with attention to detail and purpose.
+                </p>
+              </div>
+
+              <div className="w-[50%] bg-[#ECECEC]  p-5 rounded-xl hover:shadow-md transition flex flex-col">
+                <img src={product}  alt="error" className=" bg-[#ffffff] w-12 mb-3 p-2 rounded-full"  />
+                <p className="font-medium mb-1">Thoughtful Products</p>
+                <p className="text-sm opacity-60 flex-grow">
+                 Carefully designed assignments, gifts, and trackers made with purpose and meaning.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<section className="mt-16 w-full xl:w-[80%] mx-auto px-4 xl:px-0">
+
+  {/* Heading */}
+  <div className="flex items-center justify-center gap-3 mb-12">
+    <div className="w-[3px] h-10 bg-[#8A7650] rounded-full"></div>
+    <h2 className="text-2xl xl:text-4xl font-semibold text-gray-800 text-center">
+      What Our Clients Say
+    </h2>
+  </div>
+
+  {/* OUTER LOCK */}
+  <div className="w-full overflow-hidden">
+
+    {/* INNER TRACK */}
+    <div className="flex gap-4 animate-scroll w-max">
+
+      {[...reviews, ...reviews].map((item, index) => (
+        <div
+          key={index}
+          className="w-[200px] sm:w-[220px] h-[200px] bg-[#F6F5F2] rounded-xl p-4 shadow-sm shrink-0"
+        >
+
+          <div>
+            <div className="flex items-center gap-3">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-10 h-10 rounded-full object-cover"
+              />
+              <h3 className="text-sm font-semibold text-gray-800">
+                {item.name}
+              </h3>
+            </div>
+
+            <div className="flex mt-2 text-[#BBAA89] text-sm">
+              {"★".repeat(item.rating)}
+              {"☆".repeat(5 - item.rating)}
+            </div>
+
+            <p className="text-xs text-gray-600 mt-2 leading-relaxed">
+              "{item.text}"
+            </p>
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
+
+<a
+  href="https://wa.me/916006497218"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-5 right-5 
+             bg-[#000000]
+             text-white px-4 py-3 rounded-full 
+             flex items-center gap-2 z-50 
+             transition hover:scale-105"
+>
+  <img src={whatsapp} className="w-6 h-6 object-contain" alt="WhatsApp" />
+  <span className="text-sm font-medium">whatsapp</span>
+</a>
+<p>hii</p>
+
+ <Footer/>
+      {/* ================= FOOTER ================= */}
+      {/* * <div className="">
+        <Footer />
+      
+
+
+      </div>  */}
+
+
+
+
+
     </div>
   );
 };
+
 export default LandingPage;

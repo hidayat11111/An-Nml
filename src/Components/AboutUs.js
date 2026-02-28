@@ -1,178 +1,110 @@
-import React,{useState} from "react";
-import team from "./../Images/team.png";
-import verified from "./../Images/verified.png";
+import React, { useState } from "react";
+import team from "./../Images/team.jpg";
+import verified from "./../Images/verified.jpg";
 import head from "./../Images/head.png";
 import { Link } from "react-router-dom";
 import Logo from "./../Images/Logo.png";
+import cart from "./../Images/cart.png";
+import whishlist from "./../Images/whishlist.png";
 
 const AboutUs = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinks = [
-    { path: "/Landing", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/services", label: "Services" },
-    { path: "/Doctors", label: "Doctors" },
-    { path: "/contact", label: "Contact" },
+ const navLinks = [
+    { path: "/landing", label: "Home" },
+    { path: "/", label: "Categories" },
+    { path: "/", label: "Offers" },
+    { path: "/about", label: "About Us" },
+    { path: "/Doctors", label: "Contact Us" },
   ];
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
   return (
     <div className="w-full h-auto pb-6">
-       <section className="w-full fixed top-0 left-0 z-20 bg-[#EAE4DD]">
-          <nav className="flex items-center justify-between  bg-[#EAE4DD] w-full">
-          <img src={Logo} className="w-20" alt="error"/>
-            <div className="px-5 xl:px-12 py-6 flex w-full items-center justify-between">
-              {/* Full Menu for Larger Screens */}
-              <div className="xl:flex flex-grow items-center justify-end">
-                <ul className="hidden md:flex pr-16 font-light font-heading space-x-12">
-                  {navLinks.map(({ path, label }) => (
-                    <Link to={path} key={label}>
-                      <p className=" text-DarkBlack opacity-85 font-sans font-medium text-sm bg-gradient-to-r from-slate-300 to-white bg-clip-text text-transparent hover:text-gray-800 hover:bg-none hover:underline">
-                        {label}
-                      </p>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
+      <section className="fixed w-[100%] top-0 left-0 right-0 z-50 bg-[#F1F0E9]">
+        {/* NAVBAR */}
+        <nav className="flex items-center justify-between w-full max-w-screen-xl mx-auto px-4 py-2.5">
+          {/* Logo */}
+          <img src={Logo} className="w-12" alt="logo" />
 
-              {/* Burger Icon for Mobile View */}
-              <button
-                className="xl:hidden flex items-center space-x-5"
-                onClick={toggleMenu}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 hover:text-gray-200"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
+          {/* Desktop Nav Links */}
+          <div className="hidden md:flex flex-1 justify-center">
+            <ul className="flex gap-6 lg:gap-10 text-black">
+              {navLinks.map(({ path, label }) => (
+                <Link to={path} key={label}>
+                  <p className="text-sm hover:underline cursor-pointer">
+                    {label}
+                  </p>
+                </Link>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right Side */}
+          <div className="flex items-center gap-3">
+            {/* Desktop Right */}
+            <div className="hidden md:flex items-center gap-3">
+              <img src={whishlist} className="w-5" alt="" />
+              <img src={cart} className="w-5" alt="" />
+              <button className="bg-[#8A7650] text-white rounded-lg px-3 py-1.5 text-sm">
+                Login
               </button>
             </div>
 
-            {/* Mobile Menu */}
-            <div
-              className={`py-4 fixed top-0 right-0 h-auto w-full text-white transition-transform transform ${
-                isOpen ? "translate-x-0 shadow-lg" : "translate-x-full"
-              } z-20 overflow-hidden`}
-              style={{
-                background:
-                  "linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%)",
-                boxShadow: isOpen
-                  ? "0 4px 20px rgba(255, 255, 255, 0.4)"
-                  : "none",
-              }}
-            >
+            {/* Mobile Right (icons + hamburger) */}
+            <div className="flex items-center gap-3 md:hidden">
+              <img src={whishlist} className="w-5" alt="" />
+              <img src={cart} className="w-5" alt="" />
+
               <button
-                className="absolute top-4 right-4 rounded-full text-2xl bg-lightGreen text-DarkBlack px-2.5 "
-                onClick={toggleMenu}
-                aria-expanded={isOpen}
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-2xl bg-[#e0d9d9] px-2 py-0.5 rounded-md"
               >
-                &times;
+                ☰
               </button>
-              <ul className="flex flex-col items-center p-5 space-y-4 max-h-[80vh] overflow-y-auto ">
-                <div className="flex flex-col gap-2.5">
-                  {navLinks.map(({ path, label }) => (
-                    <li key={label} className="list-none">
-                      <Link
-                        to={path}
-                        onClick={toggleMenu}
-                        className="font-sans font-normal text-sm bg-gradient-to-r from-slate-300 to-white bg-clip-text text-transparent hover:text-white hover:underline underline-offset-4 decoration-gray-500"
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </div>
-              </ul>
             </div>
-          </nav>
-        </section>
+          </div>
+        </nav>
 
-      <div className="w-full flex xl:flex-row flex-col-reverse xl:h-svh pt-24">
-        <div className="xl:w-[50%] flex flex-row items-center justify-center ">
-          <div className=" w-[90%] xl:w-[78%] flex flex-col justify-center gap-3 xl:gap-6 xl:pl-5 pt-12 xl:pt-0">
-            <div className="flex flex-row items-center gap-2 hidden xl:block">
-              <img src={team} className="w-8 opacity-80" alt="erroe" />
-              <p className="text-[#a8b481] font-sans ">ABOUT US</p>
+        {/* MOBILE MENU */}
+        {isOpen && (
+          <div className="md:hidden bg-[#F1F0E9] px-4 pb-4 shadow-md">
+            <ul className="flex flex-col gap-4">
+              {navLinks.map(({ path, label }) => (
+                <Link to={path} key={label} onClick={() => setIsOpen(false)}>
+                  <p className="text-black text-sm">{label}</p>
+                </Link>
+              ))}
+
+              <button className="bg-[#8A7650] text-white rounded-lg px-3 py-2 text-sm mt-2">
+                Login
+              </button>
+            </ul>
+          </div>
+        )}
+      </section>
+
+      <div className="w-full flex xl:flex-row-reverse flex-col-reverse xl:h-svh">
+        <div className="xl:w-[50%] flex flex-row items-center justify-start">
+          <div className=" w-full xl:w-[78%] flex flex-col justify-center gap-3 xl:gap-6 px-4 xl:pl-5 pt-6 xl:pt-10">
+            <div className="flex flex-row items-center gap-2">
+              <p className="text-[#000000] opacity-50 font-semibold font-sans text-2xl ">ABOUT US</p>
             </div>
-
             <p className="font-sans text-4xl leading-tight font-medium text-DarkBlack">
-              Welcome To BHM Hospital and Nursing Home
+              Welcome To An-Naml
             </p>
-
             <p className="font-sans text-DarkBlack opacity-70 text-sm">
-              At BHM Hospital and Nursing Home , we are committed to providing
-              the highest quality healthcare services to our community. Our team
-              of highly skilled physicians, nurses, and healthcare professionals
-              is dedicated to delivering compassionate care in a
-              state-of-the-art facility.
-            </p>
-            <div className="flex flex-row gap-6">
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-row items-center gap-2">
-                  <img
-                    src={verified}
-                    className="w-6 bg-[#EAE4DD] rounded-full"
-                    alt="erroe"
-                  />
-                  <p className="text-[#a8b481] font-sans">
-                    A Team of professionals
-                  </p>
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  {" "}
-                  <img
-                    src={verified}
-                    className="w-6 bg-[#EAE4DD] rounded-full"
-                    alt="erroe"
-                  />
-                  <p className="text-[#a8b481] font-sans">
-                    {" "}
-                    7+ Years of Excellience
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-row items-center gap-2">
-                  <img
-                    src={verified}
-                    className="w-6 bg-[#EAE4DD] rounded-full"
-                    alt="erroe"
-                  />
-                  <p className="text-[#a8b481] font-sans">
-                    24/7 Medical Service{" "}
-                  </p>
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  {" "}
-                  <img
-                    src={verified}
-                    className="w-6 bg-[#EAE4DD] rounded-full"
-                    alt="erroe"
-                  />
-                  <p className="text-[#a8b481] font-sans">
-                    {" "}
-                    A Multispeciality hospital
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              {" "}
-              <button className=" mt-4 ml-1 font-sans text-sm bg-darkGreen font-medium py-3 px-3 rounded-lg text-[#ffffff]">
-                Know More About Us
-              </button>
-            </div>
+              At An-Naml, we bring together creativity, care, and purpose to
+              offer thoughtfully crafted items that add meaning to everyday
+              life. From beautifully designed assignment gifts to personalized
+              products and essential items inspired by Deen, everything we
+              create is made with intention and love.We believe that even the
+              smallest things can carry great value — a gift, a reminder, or a
+              customized piece that reflects your identity and faith.
+            </p>{" "}
+            <button className="w-[70%] xl:w-[50%] mt-4 ml-1 font-sans text-sm bg-[#8A7650] font-medium py-3 px-2 rounded-lg text-[#ffffff]">
+              Know More About Us
+            </button>
           </div>
         </div>
         <div className="xl:w-[50%] flex justify-center items-center h-auto">
@@ -181,15 +113,12 @@ const AboutUs = () => {
               <img src={team} className="w-8 opacity-80" alt="erroe" />
               <p className="text-[#a8b481] font-sans ">ABOUT US</p>
             </div>
-           
-            <div className="bg-[#D8BFD8] w-full pb-32 relative xl:absolute top-0 right-0 z-0 hidden xl:block"></div>
+
             <img
               src={head}
-              className=" mx-auto w-[85%] xl:w-[94%] relative xl:absolute xl:top-5 xl:left-3 z-10 rounded-xl xl:rounded-none"
+              className=" mx-auto w-[85%] xl:w-[100%] relative xl:absolute xl:top-5 xl:left-3 z-10 rounded-xl xl:rounded-none"
               alt="error"
             />
-            <div className=" bg-darkGreen absolute left-0 bottom-0 z-0 w-full pb-32 hidden xl:block"></div>
-            
           </div>
         </div>
       </div>
@@ -198,53 +127,9 @@ const AboutUs = () => {
         <hr className="w-10/12 opacity-50" />
       </div>
 
-      <div className="w-[95%] xl:w-[70%] mt-8 mx-auto border-2 border-[#DCDCDC] bg-[#DCDCDC] flex flex-row xl:justify-evenly gap-2 py-2 xl:py-10 text-center">
-        <div className="flex flex-col gap-2">
-          <p className="font-sans font-semibold text-4xl text-DarkBlack opacity-85">
-            10
-            <span className="text-[#D8BFD8] font-semibold opacity-100 text-3xl">
-              +
-            </span>
-          </p>
-
-          <p className="text-DarkBlack opacity-80 font-sans text-sm font-medium">
-            National Awards
-          </p>
-        </div>
-        <div className="flex flex-col gap-2">
-          <p className="font-sans font-semibold text-4xl text-DarkBlack opacity-85">
-            8
-            <span className="text-[#D8BFD8] font-semibold opacity-100 text-3xl">
-              +
-            </span>
-          </p>
-          <p className="text-DarkBlack opacity-80 font-sans text-sm  font-medium">
-            Expert Doctors
-          </p>
-        </div>
-        <div className="flex flex-col gap-2">
-          <p className="font-sans font-semibold text-4xl text-DarkBlack opacity-85">
-            10
-            <span className="text-[#D8BFD8] font-semibold opacity-100 text-3xl">
-              +
-            </span>
-          </p>
-          <p className="text-DarkBlack opacity-80 font-sans text-sm  font-medium">
-            Satisfied Patients
-          </p>
-        </div>
-        <div className="flex flex-col gap-2">
-          <p className="font-sans font-semibold text-4xl text-DarkBlack opacity-85">
-            1
-            <span className="text-[#D8BFD8] font-semibold opacity-100 text-3xl">
-              +
-            </span>
-          </p>
-          <p className="text-DarkBlack opacity-80 font-sans text-sm  font-medium">
-            Operation Success
-          </p>
-        </div>
-      </div>
+     
+   
+      
     </div>
   );
 };
