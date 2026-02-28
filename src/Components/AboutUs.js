@@ -15,9 +15,7 @@ const AboutUs = () => {
     { path: "/about", label: "About Us" },
     { path: "/Doctors", label: "Contact Us" },
   ];
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+
   return (
     <div className="w-full h-auto pb-6">
       <section className="fixed w-[100%] top-0 left-0 right-0 z-50 bg-[#F1F0E9]">
