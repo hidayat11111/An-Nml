@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import team from "./../Images/team.jpg";
-import verified from "./../Images/verified.jpg";
 import head from "./../Images/head.png";
 import { Link } from "react-router-dom";
 import Logo from "./../Images/Logo.png";
