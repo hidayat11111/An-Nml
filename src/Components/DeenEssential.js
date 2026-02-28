@@ -17,7 +17,7 @@ const products = [
       id: 1,
       title: "Salah Tracker",
       price: 350,
-      oldPrice: 400,
+      oldPrice: 380,
       desc: "/ per Book",
      image: Tracker,
       offer: "8% Off",
