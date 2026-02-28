@@ -37,7 +37,7 @@ transition={{
         >
         <div className="flex flex-row gap-2 items-center">
            <img className="w-20" id="logo" src={Logo} alt="" /> 
-          <p className=" text-center font-sans font-medium text-2xl opacity-85 hidden xl:block">
+          <p className=" text-center font-sans font-medium text-2xl opacity-85 ">
           Customized By Tabish
           </p>
           </div>
