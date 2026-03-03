@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import StartPage from "./StartPage";
 import DeenEssential from "./DeenEssential";
 import AboutUs from "./AboutUs";
+import Contact from "./Contact";
 const PageRouting = () => {
   return (
     <Routes>
@@ -16,6 +17,7 @@ const PageRouting = () => {
       <Route path="/AssigmentPage" element={<AssigmentPage/>} />
       <Route path="/Deen" element={<DeenEssential/>} />
       <Route path="/about" element={<AboutUs/>} />
+       <Route path="/contact" element={<Contact/>} />
 
       {/* <Route path="/assigment" element={<AssigmentsPage />} />
       <Route path="/about" element={<AboutUs />} />

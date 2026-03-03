@@ -38,7 +38,7 @@ const products = [
     { path: "/", label: "Categories" },
     { path: "/", label: "Offers" },
     { path: "/about", label: "About Us" },
-    { path: "/Doctors", label: "Contact Us" },
+    { path: "/contact", label: "Contact Us" },
   ];
     return(
        <div className="flex flex-col items-center">

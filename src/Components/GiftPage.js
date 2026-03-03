@@ -102,10 +102,10 @@ const gift = [
   ];
      const navLinks = [
     { path: "/landing", label: "Home" },
-    { path: "/about", label: "Categories" },
-    { path: "/about", label: "Offers" },
-    { path: "/services", label: "About Us" },
-    { path: "/Doctors", label: "Contact Us" },
+    { path: "/", label: "Categories" },
+    { path: "/", label: "Offers" },
+    { path: "/about", label: "About Us" },
+    { path: "/contact", label: "Contact Us" },
   ];
   
 
