@@ -154,7 +154,7 @@ const reviews = [
     { path: "/", label: "Categories" },
     { path: "/", label: "Offers" },
     { path: "/about", label: "About Us" },
-    { path: "/", label: "Contact Us" },
+    { path: "/contact", label: "Contact Us" },
   ];
 
   return (
