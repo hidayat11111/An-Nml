@@ -69,7 +69,7 @@ const Footer=()=>{
 
       <div className="flex items-center gap-2 text-sm text-DarkBlack opacity-90">
         <img src={telephone} alt="error" className="w-5" />
-        <p>7889312300</p>
+        <p>6006497218</p>
       </div>
     </div>
 
