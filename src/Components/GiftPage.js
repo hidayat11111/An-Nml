@@ -13,6 +13,7 @@ import whishlist from "./../Images/whishlist.png";
 import Logo from "./../Images/Logo.png";
 import Cental from "./../Images/Cental.jpg"
 import { Link } from "react-router-dom";
+import singleBo from "./../Images/singleBo.jpg";
 const GiftPage=()=>{
     const [isOpen, setIsOpen] = useState(false);
 
@@ -96,6 +97,15 @@ const gift = [
       oldPrice: 187,
       desc: "/ per Candle",
       image: Cental,
+      offer: "20% Off",
+    },
+      {
+      id: 10,
+      title: "Single rose Bouquet",
+      price: 120,
+      oldPrice: 150,
+      desc: "/ per Rose",
+      image: singleBo,
       offer: "20% Off",
     },
     
