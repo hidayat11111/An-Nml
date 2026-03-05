@@ -8,7 +8,7 @@ import Gift from "./../Images/gift.png";
 import Assigments from "./../Images/Assigments.jpg";
 import salah from "./../Images/Salah.jpg";
 import Footer from "./Footer";
-
+import boki from "./../Images/boki.jpeg";
 import cart from "./../Images/cart.png";
 import whishlist from "./../Images/whishlist.png";
 // import Footer from "./Footer";
@@ -132,6 +132,15 @@ const reviews = [
       desc: "/ per model",
       image: Clay,
       offer: "12% Off",
+    },
+    {
+       id: 7,
+      title: "Customized bouquet",
+      price: 650,
+      oldPrice: 812,
+      desc: "/ per Bouquet",
+      image: boki,
+      offer: "20% Off",
     },
   ];
 

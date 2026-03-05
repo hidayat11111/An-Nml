@@ -63,17 +63,9 @@ const gift = [
       image: cframe,
       offer: "22% Off",
     },
+    
     {
       id: 6,
-      title: "Canvas",
-      price: 250,
-      oldPrice: 300,
-      desc: "/ Per Canvas",
-     image: Canvas,
-      offer: "17% Off",
-    },
-    {
-      id: 7,
       title: "Novel Themed Frames",
       price: 300,
       oldPrice: 375,
@@ -82,7 +74,7 @@ const gift = [
       offer: "20% Off",
     },
     {
-      id: 8,
+      id: 7,
       title: "Customized bouquet",
       price: 650,
       oldPrice: 812,
@@ -91,7 +83,7 @@ const gift = [
       offer: "20% Off",
     },
      {
-      id: 9,
+      id: 8,
       title: "Scented candles",
       price: 150,
       oldPrice: 187,
@@ -100,7 +92,7 @@ const gift = [
       offer: "20% Off",
     },
       {
-      id: 10,
+      id: 9,
       title: "Single rose Bouquet",
       price: 120,
       oldPrice: 150,
