@@ -18,63 +18,9 @@ const GiftPage=()=>{
     const [isOpen, setIsOpen] = useState(false);
 
 const gift = [
-    {
+
+   {
       id: 1,
-      title: "Frames",
-      price: 300,
-      oldPrice: 365,
-      desc: "/ per frame",
-      image: frame,
-      offer: "18% Off",
-    },
-    {
-      id: 2,
-      title: "Return Gift Candles",
-      price: 60,
-      oldPrice: 75,
-      desc: "/ per candle ",
-       image: candle,
-      offer: "20% Off",
-    },
-    {
-      id: 3,
-      title: "Hand written letters",
-      price: 120,
-      oldPrice: 150,
-      desc: "/ per letter",
-      image: letter,
-      offer: "20% Off",
-    },
-    {
-      id: 4,
-      title: "Message Bottle",
-      price: 80,
-      oldPrice: 100,
-      desc: "/ per bottle",
-     image: bottle,
-      offer: "20% Off",
-    },
-    {
-      id: 5,
-      title: "calligraphic Frames",
-      price: 300,
-      oldPrice: 384,
-      desc: "/ per Name",
-      image: cframe,
-      offer: "22% Off",
-    },
-    
-    {
-      id: 6,
-      title: "Novel Themed Frames",
-      price: 300,
-      oldPrice: 375,
-      desc: "/ per Frame",
-      image: novel,
-      offer: "20% Off",
-    },
-    {
-      id: 7,
       title: "Customized bouquet",
       price: 650,
       oldPrice: 812,
@@ -82,8 +28,35 @@ const gift = [
       image: boki,
       offer: "20% Off",
     },
+    {
+      id: 2,
+      title: "Frames",
+      price: 300,
+      oldPrice: 365,
+      desc: "/ per frame",
+      image: frame,
+      offer: "18% Off",
+    },
+      {
+      id: 3,
+      title: "Novel Themed Frames",
+      price: 300,
+      oldPrice: 375,
+      desc: "/ per Frame",
+      image: novel,
+      offer: "20% Off",
+    },
+      {
+      id: 4,
+      title: "calligraphic Frames",
+      price: 300,
+      oldPrice: 384,
+      desc: "/ per Name",
+      image: cframe,
+      offer: "22% Off",
+    },
      {
-      id: 8,
+      id: 5,
       title: "Scented candles",
       price: 150,
       oldPrice: 187,
@@ -91,8 +64,17 @@ const gift = [
       image: Cental,
       offer: "20% Off",
     },
-      {
-      id: 9,
+     {
+      id: 6,
+      title: "Hand written letters",
+      price: 120,
+      oldPrice: 150,
+      desc: "/ per letter",
+      image: letter,
+      offer: "20% Off",
+    },
+     {
+      id: 7,
       title: "Single rose Bouquet",
       price: 120,
       oldPrice: 150,
@@ -100,6 +82,27 @@ const gift = [
       image: singleBo,
       offer: "20% Off",
     },
+ 
+    {
+      id: 8,
+      title: "Message Bottle",
+      price: 80,
+      oldPrice: 100,
+      desc: "/ per bottle",
+     image: bottle,
+      offer: "20% Off",
+    },
+       {
+      id: 9,
+      title: "Return Gift Candles",
+      price: 60,
+      oldPrice: 75,
+      desc: "/ per candle ",
+       image: candle,
+      offer: "20% Off",
+    },
+ 
+   
     
   ];
      const navLinks = [
