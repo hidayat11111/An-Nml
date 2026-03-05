@@ -3,7 +3,7 @@ import { useState } from "react";
 import frame from "./../Images/frame.jpeg";
 import letter from "./../Images/letter.jpeg";
 import candle from "./../Images/candle.jpeg";
-import Canvas from "./../Images/canvas.jpeg";
+
 import cframe from "./../Images/cframe.jpeg";
 import novel from "./../Images/novel.jpeg";
 import boki from "./../Images/boki.jpeg";

@@ -31,7 +31,7 @@ const Footer=()=>{
             <img src={instagram} alt="error" className="w-4" />
           </div>
         </Link>
-         <Link>
+         <Link to="https://www.facebook.com/share/1KcZ5xEqCc/">
           <div className="bg-[#8A7650] rounded-full p-2">
             <img src={Face} alt="error" className="w-4" />
           </div>
@@ -64,7 +64,7 @@ const Footer=()=>{
 
       <div className="flex items-center gap-2 text-sm text-DarkBlack opacity-90">
         <img src={envelope} alt="error" className="w-5" />
-        <p>Stabish909@gmail.com</p>
+        <p>Stabish805@gmail.com</p>
       </div>
 
       <div className="flex items-center gap-2 text-sm text-DarkBlack opacity-90">
