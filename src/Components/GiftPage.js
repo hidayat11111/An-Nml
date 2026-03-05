@@ -29,7 +29,7 @@ const gift = [
     },
     {
       id: 2,
-      title: "Candles",
+      title: "Return Gift Candles",
       price: 60,
       oldPrice: 75,
       desc: "/ per candle ",
