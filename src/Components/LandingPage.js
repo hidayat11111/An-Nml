@@ -541,7 +541,6 @@ const reviews = [
   <img src={whatsapp} className="w-6 h-6 object-contain" alt="WhatsApp" />
   <span className="text-sm font-medium">whatsapp</span>
 </a>
-<p>hii</p>
 
  <Footer/>
       {/* ================= FOOTER ================= */}
