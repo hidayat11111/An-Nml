@@ -116,7 +116,17 @@ const reviews = [
       offer: "25% Off",
     },
     {
-      id: 5,
+       id: 5,
+      title: "Customized bouquet",
+      price: 650,
+      oldPrice: 812,
+      desc: "/ per Bouquet",
+      image: boki,
+      offer: "20% Off",
+    },
+
+    {
+      id: 6,
       title: "Practical Notebook",
       price: 300,
       oldPrice: 350,
@@ -125,7 +135,7 @@ const reviews = [
       offer: "10% Off",
     },
     {
-      id: 6,
+      id: 7,
       title: "Clay Model",
       price: 400,
       oldPrice: 450,
@@ -133,15 +143,7 @@ const reviews = [
       image: Clay,
       offer: "12% Off",
     },
-    {
-       id: 7,
-      title: "Customized bouquet",
-      price: 650,
-      oldPrice: 812,
-      desc: "/ per Bouquet",
-      image: boki,
-      offer: "20% Off",
-    },
+    
   ];
 
 
