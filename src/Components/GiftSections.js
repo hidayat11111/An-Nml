@@ -23,7 +23,7 @@ const GiftSection = () => {
   ];
 
   const giftItems = [
-    { name: "Frames", path: "/frames", img: FrameSection },
+    { name: "Frames", path: "/Frame", img: FrameSection },
     { name: "Bouquets", path: "/bouquet", img: Boqi },
     { name: "Jewellery", path: "/Jewellery", img: Jewellery },
     { name: "Hampers", path: "/hamper", img: Hmaper },

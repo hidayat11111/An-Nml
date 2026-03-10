@@ -264,7 +264,7 @@ const JewelleryPage = ()=>{
         lg:grid-cols-4 
         xl:grid-cols-5 
         gap-9 md:gap-5 lg:gap-6
-        px-3 sm:px-6
+        md:px-0 sm:px-6
         w-[90%]
         mb-20
     
