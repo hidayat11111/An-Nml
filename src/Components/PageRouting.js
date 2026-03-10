@@ -8,6 +8,8 @@ import StartPage from "./StartPage";
 import DeenEssential from "./DeenEssential";
 import AboutUs from "./AboutUs";
 import Contact from "./Contact";
+import GiftSection from "./GiftSections";
+import JewelleryPage from "./JewelleryPage";
 const PageRouting = () => {
   return (
     <Routes>
@@ -18,6 +20,9 @@ const PageRouting = () => {
       <Route path="/Deen" element={<DeenEssential/>} />
       <Route path="/about" element={<AboutUs/>} />
        <Route path="/contact" element={<Contact/>} />
+       <Route path="/GiftSections" element={<GiftSection/>} />
+       <Route path="/Jewellery" element={<JewelleryPage/>} />
+
 
       {/* <Route path="/assigment" element={<AssigmentsPage />} />
       <Route path="/about" element={<AboutUs />} />

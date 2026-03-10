@@ -29,6 +29,7 @@ import Clay from "../Images/Clay.jpeg";
 import LooseSheet from "../Images/LooseSheet.jpg"
 import User12 from "./../Images/User12.png"
 import whatsapp from "./../Images/whatsapp.png"
+import Family from "./../Images/family.png";
 
 
 const LandingPage = () => {
@@ -275,9 +276,9 @@ const reviews = [
           {/* Card */}
           <div className="flex flex-col items-center gap-3 w-56">
             <div className="border-2 border-[#f6f0d7] rounded-full w-36 h-36 flex items-center justify-center">
-              <Link to="/GiftPage">  <img src={Gift}  alt="error" className="w-20 object-contain" /> </Link>
+              <Link to="/GiftSections">  <img src={Gift}  alt="error" className="w-20 object-contain" /> </Link>
             </div>
-           <Link to="/GiftPage">   <p className="text-lg text-DarkBlack opacity-70">Gift Items</p> </Link> 
+           <Link to="/GiftSections">   <p className="text-lg text-DarkBlack opacity-70">Gift Items</p> </Link> 
           </div>
 
           {/* Card */}
@@ -295,7 +296,18 @@ const reviews = [
             </div>
         <Link to="/Deen"><p className="text-lg text-DarkBlack opacity-70">Deen Essentials</p></Link>
           </div>
+
+
+          <div className="flex flex-col items-center gap-3 w-56">
+            <div className="border-2 border-[#f6f0d7] rounded-full w-36 h-36 flex items-center justify-center">
+             <Link to="/Deen"> <img src={Family}  alt="error" className="w-20 object-contain" /> </Link>
+            </div>
+        <Link to="/Deen"><p className="text-lg text-DarkBlack opacity-70">Festive special</p></Link>
+          </div>
         </div>
+        
+       
+
       </section>
 
       {/* ================= DIVIDER ================= */}
