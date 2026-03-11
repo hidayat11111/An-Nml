@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 import Logo from "./../Images/Logo.png";
 import cart from "./../Images/cart.png";
 import whishlist from "./../Images/whishlist.png";
+// import Jewellery from "./../Images/jewelry.png";
+// import Hmaper from "./../Images/Hamper.png";
+// import candle from "./../Images/cand.png";
+// import Boqi from "./../Images/bouquet.png";
+// import chains from "./../Images/chocolate.png";
+import Mehdi from "./../Images/mehdi.jpg";
 
-import FrameSection from "./../Images/fra.png";
-import Jewellery from "./../Images/jewelry.png";
-import Hmaper from "./../Images/Hamper.png";
-import candle from "./../Images/cand.png";
-import Boqi from "./../Images/bouquet.png";
-import chains from "./../Images/chocolate.png";
-
-const GiftSection = () => {
+const FestivalCategories = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -23,12 +22,12 @@ const GiftSection = () => {
   ];
 
   const giftItems = [
-    { name: "Frames", path: "/Frame", img: FrameSection },
-    { name: "Bouquets", path: "/bouquet", img: Boqi },
-    { name: "Jewellery", path: "/Jewellery", img: Jewellery },
-    { name: "Hampers", path: "/hamper", img: Hmaper },
-    { name: "Candles", path: "/candles", img: candle },
-    { name: "Customized chocolates", path: "/choc", img: chains },
+    { name: "Mehendi", path: "/mehdi", img:Mehdi },
+    // { name: "Bouquets", path: "/bouquet", img: Boqi },
+    // { name: "Jewellery", path: "/Jewellery", img: Jewellery },
+    // { name: "Hampers", path: "/hamper", img: Hmaper },
+    // { name: "Candles", path: "/candles", img: candle },
+    // { name: "Customized chocolates", path: "/Choclates", img: chains },
   ];
 
   return (
@@ -104,9 +103,9 @@ const GiftSection = () => {
         <div className="flex flex-col gap-1 mt-2 mb-10 items-center ">
 
             <h2 className="font-sans text-2xl xl:text-4xl tracking-tight font-extrabold text-darkGreen">
-          Gift Categories
+          Festival Categories
         </h2>
-        <p className="opacity-90">Crafted to Sparkle, Designed to Impress</p>
+        <p className="opacity-90">Perfect picks for every celebration</p>
 
         </div>
         
@@ -147,4 +146,4 @@ const GiftSection = () => {
   );
 };
 
-export default GiftSection;
+export default FestivalCategories;

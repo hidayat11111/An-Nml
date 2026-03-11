@@ -10,6 +10,11 @@ import Contact from "./Contact";
 import GiftSection from "./GiftSections";
 import JewelleryPage from "./JewelleryPage";
 import FramesPage from "./FramesPage";
+import FestivalCategories from "./FestivalCategories";
+import MehendiPage from "./MehendiPage";
+import HamperPage from "./HamperPage";
+import CandlesrPage from "./CandlesPage";
+import ChoclatePage from "./ChoclatePage";
 const PageRouting = () => {
   return (
     <Routes>
@@ -22,6 +27,12 @@ const PageRouting = () => {
        <Route path="/contact" element={<Contact/>} />
        <Route path="/GiftSections" element={<GiftSection/>} />
        <Route path="/Jewellery" element={<JewelleryPage/>} />
+       <Route path="/festival" element={<FestivalCategories/>} />
+        <Route path="/mehdi" element={<MehendiPage/>} />
+       <Route path="/hamper" element={<HamperPage/>} />
+       <Route path="/candles" element={<CandlesrPage/>} />
+       <Route path="/choc" element={<ChoclatePage/>} />
+       
 
 
       {/* <Route path="/assigment" element={<AssigmentsPage />} />

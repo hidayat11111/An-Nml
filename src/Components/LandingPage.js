@@ -300,9 +300,9 @@ const reviews = [
 
           <div className="flex flex-col items-center gap-3 w-56">
             <div className="border-2 border-[#f6f0d7] rounded-full w-36 h-36 flex items-center justify-center">
-             <Link to="/Deen"> <img src={Family}  alt="error" className="w-20 object-contain" /> </Link>
+             <Link to="/festival"> <img src={Family}  alt="error" className="w-20 object-contain" /> </Link>
             </div>
-        <Link to="/Deen"><p className="text-lg text-DarkBlack opacity-70">Festive special</p></Link>
+        <Link to="/festival"><p className="text-lg text-DarkBlack opacity-70">Festive special</p></Link>
           </div>
         </div>
         
