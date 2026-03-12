@@ -31,6 +31,8 @@ const gift = [
       image: h1,
       offer: "20% Off",
     },
+     
+
     
     
   ];

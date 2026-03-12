@@ -15,6 +15,7 @@ import MehendiPage from "./MehendiPage";
 import HamperPage from "./HamperPage";
 import CandlesrPage from "./CandlesPage";
 import ChoclatePage from "./ChoclatePage";
+import EidPage from "./EidPage";
 const PageRouting = () => {
   return (
     <Routes>
@@ -32,6 +33,7 @@ const PageRouting = () => {
        <Route path="/hamper" element={<HamperPage/>} />
        <Route path="/candles" element={<CandlesrPage/>} />
        <Route path="/choc" element={<ChoclatePage/>} />
+       <Route path="/Eid" element={<EidPage/>} />
        
 
 

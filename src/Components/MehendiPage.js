@@ -161,7 +161,7 @@ const gift = [
         <h2 className=" font-sans text-2xl xl:text-4xl tracking-tight font-extrabold text-darkGreen">
           Mehendi
         </h2>
-        <p className="opacity-90">Celebrate traditions with beautiful Mehendi designs.</p>
+        <p className="opacity-90">Celebrate traditions with beautiful Mehendi designs</p>
 
       </div>
 
