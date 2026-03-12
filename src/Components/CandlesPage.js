@@ -173,6 +173,7 @@ const gift = [
         xl:grid-cols-5 
         gap-9 md:gap-5 lg:gap-6
         md:px-0 sm:px-6
+        mb-10
         w-[90%]
       "
     >

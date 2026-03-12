@@ -43,7 +43,7 @@ const EidPage = () => {
     },
     {
       id: 4,
-      title: "Boys Eid Gift",
+      title: "Girls Eid Gift",
       price: 200,
       oldPrice: 250,
       desc: "/ per item",
