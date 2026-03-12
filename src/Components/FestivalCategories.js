@@ -4,7 +4,7 @@ import Logo from "./../Images/Logo.png";
 import cart from "./../Images/cart.png";
 import whishlist from "./../Images/whishlist.png";
 
-import Mehdi from "./../Images/mehdi.jpg";
+import Mehdi from "./../Images/mehdi.png";
 import Eid from "./../Images/Eid.png";
 
 const FestivalCategories = () => {
