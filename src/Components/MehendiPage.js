@@ -16,6 +16,7 @@ import m4 from "./../Images/m4.jpeg";
 import m5 from "./../Images/m5.jpeg";
 import m6 from "./../Images/m6.jpeg";
 import m7 from "./../Images/m7.jpeg";
+import m8 from "./../Images/m8.jpeg";
 
 
 const MehendiPage=()=>{
@@ -28,7 +29,7 @@ const gift = [
       title: "Classic Mehendi",
       price: 300,
       oldPrice: 375,
-      desc: "/ per frame",
+      desc: "/ per hand",
       image: m1,
       offer: "20% Off",
     },
@@ -55,7 +56,7 @@ const gift = [
       title: "Elegant Hand Mehendi",
       price: 300,
       oldPrice: 375,
-      desc: "/ per frame",
+      desc: "/ per hand",
       image: m4,
       offer: "20% Off",
     },
@@ -84,6 +85,15 @@ const gift = [
       oldPrice: 150,
       desc: "/ per design",
       image: m7,
+      offer: "20% Off",
+    },
+    {
+      id: 8,
+      title: "Organic mehendi cone",
+      price: 50,
+      oldPrice: 62,
+      desc: "/ per cone",
+      image: m8,
       offer: "20% Off",
     },
      
