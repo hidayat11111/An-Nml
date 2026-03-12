@@ -1,24 +1,21 @@
 import React from "react";
 import { useState } from "react";
 
-// import letter from "./../Images/letter.jpeg";
-// import candle from "./../Images/candle.jpeg";
 
-
-// import boki from "./../Images/boki.jpeg";
-// import bottle from "./../Images/bottle.jpeg";
 import cart from "./../Images/cart.png";
 import whishlist from "./../Images/whishlist.png";
 import Logo from "./../Images/Logo.png";
-// import Cental from "./../Images/Cental.jpg"
+
 import { Link } from "react-router-dom";
-// import singleBo from "./../Images/singleBo.jpg";
+
 
 import m1 from "./../Images/m1.jpeg";
 import m2 from "./../Images/m2.jpeg";
 import m3 from "./../Images/m3.jpeg";
 import m4 from "./../Images/m4.jpeg";
 import m5 from "./../Images/m5.jpeg";
+import m6 from "./../Images/m6.jpeg";
+import m7 from "./../Images/m7.jpeg";
 
 
 const MehendiPage=()=>{
@@ -38,9 +35,9 @@ const gift = [
     {
       id: 2,
       title: "Mandala Mehendi",
-      price: 300,
-      oldPrice: 375,
-      desc: "/ per frame",
+      price: 250,
+      oldPrice: 312,
+      desc: "/ both hands tikki,tips",
       image: m2,
       offer: "20% Off",
     },
@@ -48,8 +45,8 @@ const gift = [
       id: 3,
       title: "Couple Name Mehendi",
       price: 1200,
-      oldPrice: 375,
-      desc: "/ both hands",
+      oldPrice: 1500,
+      desc: "/ both full hands",
       image: m3,
       offer: "20% Off",
     },
@@ -69,6 +66,24 @@ const gift = [
       oldPrice: 375,
       desc: "/ per frame",
       image: m5,
+      offer: "20% Off",
+    },
+    {
+      id: 6,
+      title: "floral Mehendi",
+      price: 400,
+      oldPrice: 500,
+      desc: "/ 1side full hand+bail",
+      image: m6,
+      offer: "20% Off",
+    },
+     {
+      id: 7,
+      title: "Flower Design Mehendi",
+      price: 120,
+      oldPrice: 150,
+      desc: "/ per design",
+      image: m7,
       offer: "20% Off",
     },
      
