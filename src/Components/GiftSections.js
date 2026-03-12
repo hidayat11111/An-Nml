@@ -129,7 +129,7 @@ const GiftSection = () => {
   </div>
 
   <div className="flex items-center justify-center">
-  <p className="text-[17px] font-semibold text-[#8A7650] opacity-70  tracking-wide">
+  <p className="text-[17px] font-semibold text-[#8A7650] opacity-70  tracking-wide text-center">
     {item.name}
   </p>
 </div>
