@@ -172,10 +172,10 @@ const reviews = [
   return (
     <div className="w-full">
       {/* ================= NAVBAR ================= */}
-   <section className="fixed w-full top-0 left-0 z-50 bg-[#F1F0E9] border-2">
+   <section className="fixed w-full top-0 left-0 z-50 bg-[#F1F0E9]">
 
   {/* NAVBAR */}
-  <nav className="flex items-center justify-between w-full px-4 py-2.5 border-2">
+  <nav className="flex items-center justify-between w-full px-4 py-2.5">
 
     {/* Logo */}
     <img src={Logo} className="w-12" alt="logo" />
