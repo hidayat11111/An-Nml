@@ -10,7 +10,7 @@ import { useState } from "react";
 import cart from "./../Images/cart.png";
 import whishlist from "./../Images/whishlist.png";
 import Logo from "./../Images/Logo.png";
-// import Cental from "./../Images/Cental.jpg"
+// import Cental from "./.
 import { Link } from "react-router-dom";
 // import singleBo from "./../Images/singleBo.jpg";
 
